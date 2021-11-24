@@ -7,10 +7,11 @@ import { HomeWolfCardsC } from "./Components/HomeWolfCardsC.js";
 function App() {
   return (
     <div className="App">
+    <NavC />
       <div className="text">
         <h1>На нашем сайте вы сможете найти:</h1>
       </div>
-      <NavC />
+      
       <div className="cards">
         <HomeWolfCardsC />
       </div>

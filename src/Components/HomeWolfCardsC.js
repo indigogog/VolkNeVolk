@@ -89,7 +89,7 @@ export const HomeWolfCardsC = observer(
                   <Card.Body>
                     <Card.Title>Walk </Card.Title>
                     <Card.Text>Walk </Card.Text>
-                    <Button variant="outline-info">Открыть</Button>
+                    <Button variant="outline-info">Walk</Button>
                   </Card.Body>
                 </Card>
               </Col>
