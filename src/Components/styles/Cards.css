@@ -1,0 +1,17 @@
+.mb-2{
+    background-color: rgba(42, 1, 58, 0);
+    width: 450px;
+    height: 450px;
+}
+.test{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.row{
+    justify-content: space-around;
+}
+.CardImage{
+    width: 400px;
+    height: 300px;
+}
