@@ -1,8 +1,4 @@
 .NavPan{
-    position: sticky;
     z-index: 5;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
   }
-.Drop{
-  background-color: rgba(255, 0, 0, 0);
-}

@@ -1,20 +1,23 @@
 import "./App.css";
-import { CounterClass } from "./Components/CounterClass.js";
-import { CounterF } from "./Components/CounterF.js";
 import { NavC } from "./Components/NavC";
 import { HomeWolfCardsC } from "./Components/HomeWolfCardsC.js";
+import {MemesCardsC } from "./Components/MemesCardsC.js"
+import {OrigC } from "./Components/OrigC.js"
+import {QuotesC } from "./Components/QuotesC.js"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-    <NavC />
-      <div className="text">
-        <h1>На нашем сайте вы сможете найти:</h1>
-      </div>
-      
-      <div className="cards">
-        <HomeWolfCardsC />
-      </div>
+      <NavC />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeWolfCardsC/>}/>
+          <Route path="/memes" element={<MemesCardsC/>}/>
+          <Route path="/orig" element={<OrigC/>}/>
+          <Route path="/quotes" element={<QuotesC/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

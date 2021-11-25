@@ -1,4 +1,4 @@
-import { action, makeObservable ,observable, computed, makeAutoObservable, autorun, when,reaction } from 'mobx';
+import { action,makeAutoObservable, when,reaction } from 'mobx';
 
 export class counterStoreClass{
     count = 0; 

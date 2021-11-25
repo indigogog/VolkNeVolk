@@ -1,7 +1,7 @@
 import {React, Component} from 'react';
 import Button from 'react-bootstrap/Button';
 import { observer } from 'mobx-react';
-import { action, makeObservable ,observable, computed, runInAction } from 'mobx';
+import {runInAction } from 'mobx';
 
 
 import { counterStoreClass } from '../stores';

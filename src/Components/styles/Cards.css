@@ -15,10 +15,13 @@
     margin-right: auto;
     
 }
+.text{
+    color: white;
+    margin-bottom: 40px;
+  }
 .test{
     display: flex;
     flex-direction: row;
-    margin-left: 5vw;
 }
 .row{
     justify-content: space-around;

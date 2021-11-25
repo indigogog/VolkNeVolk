@@ -1,23 +1,32 @@
 import { React, Component } from "react";
-import { Button, Card, Row, Col, CardGroup } from "react-bootstrap";
+import { Card, Row, Col, CardGroup, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
-import "./styles/Cards.css";
-import { HomeWolfCardsStore } from "../stores";
+import { MemesStore } from "../stores";
+import './styles/But.css'
 
-const store = new HomeWolfCardsStore();
+const store = new MemesStore();
 
-export const HomeWolfCardsC = observer(
-  class HomeWolfCardsC extends Component {
+export const MemesCardsC = observer(
+  class MemesCardsC extends Component {
     render() {
       return (
         <div>
-          <div className="text">
-            <h1>На нашем сайте вы сможете найти:</h1>
+          <div className="bbuutt">
+            <Button variant="primary" onClick={store.dec}>
+              -
+            </Button>{" "}
+            <span style={{color:"white"}}> {store.count} </span>
+            <Button variant="primary" onClick={store.inc}>
+              +
+            </Button>{" "}
           </div>
+
           <div className="test">
             <CardGroup>
-              <Row xs={1} md={2} lg={2} xl={4} xxl={4}>
-                {store.dats.map((item) => (
+              <Row xs={1} md={2} lg={3} xl={4} xxl={5}>
+                {store.dats.map((item, index) =>{
+                  if(store.count>index)
+                    return (
                   <Col key={item.key}>
                     <Card
                       text="white"
@@ -30,19 +39,15 @@ export const HomeWolfCardsC = observer(
                     >
                       <Card.Img
                         variant="top"
-                        src={item.srcImage}
+                        src={item.src}
                         className="CardImage"
                       />
                       <Card.Body>
-                        <Card.Title>{item.title} </Card.Title>
-                        <Card.Text>{item.text}</Card.Text>
-                        <Button variant="outline-info" href={item.buttonHref}>
-                          Открыть
-                        </Button>
+                        <Card.Title>{item.title}</Card.Title>
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                )})}
               </Row>
             </CardGroup>
           </div>

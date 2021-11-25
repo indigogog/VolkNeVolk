@@ -4,15 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import { React, Component } from "react";
 import { observer } from "mobx-react";
-import {
-  action,
-  makeObservable,
-  observable,
-  computed,
-  runInAction,
-} from "mobx";
 import { NavDropdown } from "react-bootstrap";
 import './styles/Nav.css'
+import { HomeWolfCardsStore } from "../stores";
+
+const store = new HomeWolfCardsStore();
 
 export const NavC = observer(
   class NavC extends Component {
@@ -28,7 +24,7 @@ export const NavC = observer(
           >
             <Container>
               <Button variant="outline-info">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                   <img
                     alt=""
                     src="https://www.meme-arsenal.com/memes/a3f0faa5184bbbaf97443a9b2d99988d.jpg"
@@ -43,17 +39,17 @@ export const NavC = observer(
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                   <NavDropdown title="Walk" id="collasible-nav-dropdown" className='Drop'>
-                    <NavDropdown.Item href="#action/3.1">
+                    <NavDropdown.Item href={store.dats[0].buttonHref}>
                         Мемы про волков
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Серьёзные волки
+                    <NavDropdown.Item href={store.dats[2].buttonHref}>
+                      Исходники
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
+                    <NavDropdown.Item href={store.dats[1].buttonHref}>
                       Цитаты 
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
+                    <NavDropdown.Item href={store.dats[3].buttonHref}>
                       Walk
                     </NavDropdown.Item>
                   </NavDropdown>

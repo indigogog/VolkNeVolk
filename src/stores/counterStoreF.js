@@ -1,4 +1,3 @@
-import { observer, useLocalObservable } from 'mobx-react';
 import { action, makeObservable ,observable, computed } from 'mobx';
 
 export function counterStoreF(){
