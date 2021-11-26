@@ -1,13 +1,17 @@
 import { React, Component } from "react";
-import { Card, Row, Col, CardGroup, Button } from "react-bootstrap";
+import { Row, CardGroup, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import { MemesStore } from "../stores";
 import './styles/But.css'
+import {CardsC} from './CardsC';
 
 const store = new MemesStore();
 
 export const MemesCardsC = observer(
   class MemesCardsC extends Component {
+    constructor(props){
+      super(props);
+    }
     render() {
       return (
         <div>
@@ -27,26 +31,7 @@ export const MemesCardsC = observer(
                 {store.dats.map((item, index) =>{
                   if(store.count>index)
                     return (
-                  <Col key={item.key}>
-                    <Card
-                      text="white"
-                      style={{
-                        width: "18rem",
-                        background: "rgba(42, 1, 58, 0)",
-                      }}
-                      className="mb-2"
-                      border="info"
-                    >
-                      <Card.Img
-                        variant="top"
-                        src={item.src}
-                        className="CardImage"
-                      />
-                      <Card.Body>
-                        <Card.Title>{item.title}</Card.Title>
-                      </Card.Body>
-                    </Card>
-                  </Col>
+                  <CardsC  dtem={item} butstore={this.props.butstore}/>
                 )})}
               </Row>
             </CardGroup>

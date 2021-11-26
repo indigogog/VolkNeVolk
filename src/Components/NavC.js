@@ -12,6 +12,9 @@ const store = new HomeWolfCardsStore();
 
 export const NavC = observer(
   class NavC extends Component {
+    constructor(props){
+      super(props);
+    }
     render() {
       return (
         <div className="NavPan">
@@ -55,8 +58,8 @@ export const NavC = observer(
                   </NavDropdown>
                 </Nav>
                 <Nav>
-                  <Nav.Link href="#basket">
-                  <Button variant="outline-info">Корзина</Button>
+                  <Nav.Link href="/basket">
+                  <Button variant="outline-info">Корзина {this.props.butstore.count} </Button>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

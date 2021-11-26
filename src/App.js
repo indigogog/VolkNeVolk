@@ -1,21 +1,22 @@
 import "./App.css";
-import { NavC } from "./Components/NavC";
-import { HomeWolfCardsC } from "./Components/HomeWolfCardsC.js";
-import {MemesCardsC } from "./Components/MemesCardsC.js"
-import {OrigC } from "./Components/OrigC.js"
-import {QuotesC } from "./Components/QuotesC.js"
+import { NavC, HomeWolfCardsC, MemesCardsC,OrigC,QuotesC, BasketC } from "./Components";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BasketStore} from './stores'
+
+
+const store = new BasketStore();
 
 function App() {
   return (
     <div className="App">
-      <NavC />
+      <NavC butstore={store}/>
       <Router>
         <Routes>
           <Route path="/" element={<HomeWolfCardsC/>}/>
-          <Route path="/memes" element={<MemesCardsC/>}/>
-          <Route path="/orig" element={<OrigC/>}/>
-          <Route path="/quotes" element={<QuotesC/>}/>
+          <Route path="/memes" element={<MemesCardsC butstore={store}/>}/>
+          <Route path="/orig" element={<OrigC butstore={store}/>}/>
+          <Route path="/quotes" element={<QuotesC butstore={store}/>}/>
+          <Route path="/basket" element={<BasketC butstore={store}/>}/>
         </Routes>
       </Router>
     </div>

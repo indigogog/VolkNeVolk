@@ -12,8 +12,12 @@
     width: 450px;
     height: 450px;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto; 
+    margin-top: 25px; 
+}
+.gg-2{
+    height: auto;
+    margin-top: 25px; 
 }
 .text{
     color: white;
