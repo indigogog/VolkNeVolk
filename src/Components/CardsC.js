@@ -1,13 +1,10 @@
 import { React, Component } from "react";
-import { Card, Row, Col, CardGroup, Button } from "react-bootstrap";
+import { Card,  Col,  Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import "./styles/Cards.css";
 
 export const CardsC = observer(
   class CardsC extends Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
         <div>

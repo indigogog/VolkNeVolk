@@ -9,9 +9,6 @@ const store = new MemesStore();
 
 export const MemesCardsC = observer(
   class MemesCardsC extends Component {
-    constructor(props){
-      super(props);
-    }
     render() {
       return (
         <div>

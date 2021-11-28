@@ -5,10 +5,7 @@ import Button from "react-bootstrap/Button";
 import { React, Component } from "react";
 import { observer } from "mobx-react";
 import { NavDropdown } from "react-bootstrap";
-import './styles/Nav.css'
-import { HomeWolfCardsStore } from "../stores";
-
-const store = new HomeWolfCardsStore();
+import "./styles/Nav.css";
 
 export const NavC = observer(
   class NavC extends Component {
@@ -21,7 +18,7 @@ export const NavC = observer(
           <Navbar
             collapseOnSelect
             expand="lg"
-            bg="darkblue" 
+            bg="darkblue"
             variant="dark"
             fixed="top"
           >
@@ -41,25 +38,23 @@ export const NavC = observer(
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                  <NavDropdown title="Walk" id="collasible-nav-dropdown" className='Drop'>
-                    <NavDropdown.Item href={store.dats[0].buttonHref}>
-                        Мемы про волков
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href={store.dats[2].buttonHref}>
-                      Исходники
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href={store.dats[1].buttonHref}>
-                      Цитаты 
-                    </NavDropdown.Item>
+                  <NavDropdown
+                    title="Walk"
+                    id="collasible-nav-dropdown"
+                    className="Drop"
+                  >
+                    <NavDropdown.Item>Мемы про волков</NavDropdown.Item>
+                    <NavDropdown.Item>Исходники</NavDropdown.Item>
+                    <NavDropdown.Item>Цитаты</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href={store.dats[3].buttonHref}>
-                      Walk
-                    </NavDropdown.Item>
+                    <NavDropdown.Item>Walk</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>
-                  <Nav.Link href="/basket">
-                  <Button variant="outline-info">Корзина {this.props.butstore.count} </Button>
+                  <Nav.Link>
+                    <Button variant="outline-info" onClick={this.props.homestore.change_count(100)}>
+                      Корзина {this.props.butstore.count}{" "}
+                    </Button>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

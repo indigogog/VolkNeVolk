@@ -10,9 +10,6 @@ const store = new OrigStore();
 
 export const OrigC = observer(
     class OrigC extends Component {
-      constructor(props){
-        super(props);
-      }
       render() {
         return (
           <div>

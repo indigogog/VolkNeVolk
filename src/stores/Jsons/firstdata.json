@@ -4,27 +4,27 @@
         "srcImage": "https://www.meme-arsenal.com/memes/3bcd57d0767d6ca86797870061e1d773.jpg",
         "title":"Мемы про волков",
         "text":"В том числе и про цирк",
-        "buttonHref":"/memes"
+        "buttonHref":"#memes"
     },
     {
         "key": 2,
         "srcImage": "https://www.meme-arsenal.com/memes/476180b6197a4a158196326cbea37281.jpg",
         "title":"Цитаты волков",
         "text":"Работа не волк, волк - walk",
-        "buttonHref":"/quotes"
+        "buttonHref":"#quotes"
     },
     {
         "key": 3,
         "srcImage": "https://www.meme-arsenal.com/memes/27eceb078fff751d0fbc707c644c7478.jpg",
         "title":"Исходники",
         "text":"Пикчи",
-        "buttonHref":"/orig"
+        "buttonHref":"#orig"
     },
     {
         "key": 4,
         "srcImage": "https://i.ytimg.com/vi/m5T9cdFByEE/maxresdefault.jpg",
         "title":"Walk",
         "text":"Walk",
-        "buttonHref":"/walk"
+        "buttonHref":"#walk"
     }
 ]

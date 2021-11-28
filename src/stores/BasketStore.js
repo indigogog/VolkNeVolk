@@ -18,6 +18,6 @@ export class BasketStore{
     inc(item){
         this.count++;
         this.data.push(item);
-        console.log('ono', this.data,'onnnnnno', item);
+        console.log(this.count);
     }
 }

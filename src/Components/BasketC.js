@@ -5,9 +5,6 @@ import "./styles/Cards.css";
 
 export const BasketC = observer(
   class BasketC extends Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
         return (
             <div>

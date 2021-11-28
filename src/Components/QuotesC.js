@@ -10,9 +10,6 @@ const store = new QuotesStore();
 
 export const QuotesC = observer(
     class QuotesC extends Component {
-      constructor(props){
-        super(props);
-      }
       render() {
         return (
           <div>
