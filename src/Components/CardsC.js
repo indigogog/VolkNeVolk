@@ -8,7 +8,7 @@ export const CardsC = observer(
     render() {
       return (
         <div>
-          <Col key={this.props.dtem.key}>
+          <Col>
             <Card
               text="white"
               style={{
@@ -26,7 +26,7 @@ export const CardsC = observer(
               <Card.Body>
                 <Card.Title>{this.props.dtem.title} </Card.Title>
                 <Card.Text>{this.props.dtem.text}</Card.Text>
-                <Button variant="outline-info" onClick={()=> this.props.butstore.inc(this.props.dtem)} >
+                <Button variant="outline-info" onClick={()=> this.props.Add(this.props.dtem)} >
                           Открыть
                         </Button>
               </Card.Body>

@@ -1,12 +1,4 @@
 
-@media screen and(max-with: 500px){
-    .mb-2{
-        background-color: rgba(42, 1, 58, 0);
-        width: 450px;
-        height: 450px;
-    }
-}
-
 .mb-2{
     background-color: rgba(42, 1, 58, 0);
     width: 450px;

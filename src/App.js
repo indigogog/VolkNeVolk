@@ -1,9 +1,8 @@
 import "./App.css";
-import { NavC, HomePageC } from "./Components";
-import {BasketStore} from './stores'
+import { HomePageC } from "./Components";
 
 
-const store = new BasketStore();
+
 
 function App() {
   return (

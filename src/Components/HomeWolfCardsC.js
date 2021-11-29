@@ -8,9 +8,6 @@ const store = new HomeWolfCardsStore();
 
 export const HomeWolfCardsC = observer(
   class HomeWolfCardsC extends Component {
-    constructor(props){
-      super(props);
-    }
     render() {
       return (
         <div>
@@ -39,7 +36,7 @@ export const HomeWolfCardsC = observer(
                       <Card.Body>
                         <Card.Title>{item.title} </Card.Title>
                         <Card.Text>{item.text}</Card.Text>
-                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{console.log(item.key);this.props.ch(item.key)}}>
+                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{this.props.ch(item.key)}}>
                           Открыть
                         </Button>
                       </Card.Body>

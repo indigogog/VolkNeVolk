@@ -9,9 +9,6 @@ import "./styles/Nav.css";
 
 export const NavC = observer(
   class NavC extends Component {
-    constructor(props){
-      super(props);
-    }
     render() {
       return (
         <div className="NavPan">
@@ -23,8 +20,8 @@ export const NavC = observer(
             fixed="top"
           >
             <Container>
-              <Button variant="outline-info">
-                <Navbar.Brand href="/">
+              <Button variant="outline-info" onClick={()=>{this.props.homestore.change_count(0)}}>
+                <Navbar.Brand >
                   <img
                     alt=""
                     src="https://www.meme-arsenal.com/memes/a3f0faa5184bbbaf97443a9b2d99988d.jpg"
@@ -43,17 +40,17 @@ export const NavC = observer(
                     id="collasible-nav-dropdown"
                     className="Drop"
                   >
-                    <NavDropdown.Item>Мемы про волков</NavDropdown.Item>
-                    <NavDropdown.Item>Исходники</NavDropdown.Item>
-                    <NavDropdown.Item>Цитаты</NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Мемы про волков</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Исходники</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Цитаты</Button></NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item>Walk</NavDropdown.Item>
+                    <NavDropdown.Item><Button variant="danger">Walk</Button></NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>
                   <Nav.Link>
-                    <Button variant="outline-info" onClick={this.props.homestore.change_count(100)}>
-                      Корзина {this.props.butstore.count}{" "}
+                    <Button variant="outline-info" onClick={()=>{this.props.homestore.change_count(100)}}>
+                      Корзина {this.props.homestore.basketCount}{" "}
                     </Button>
                   </Nav.Link>
                 </Nav>

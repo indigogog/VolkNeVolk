@@ -1,10 +1,9 @@
 import { React, Component } from "react";
 import { NavC} from "./index";
-import {HomePageStoreC,BasketStore } from "../stores";
+import {HomePageStoreC} from "../stores";
 import { observer } from "mobx-react";
 
 
-const basstore = new BasketStore();
 
 
 const store = new HomePageStoreC();
@@ -13,7 +12,7 @@ export const HomePageC = observer(
  class HomePageC extends Component {
   render() {
     return (<div className={store.count}>
-    <NavC homestore={store} butstore={basstore}/>
+    <NavC homestore={store}/>
     {store.drow()}</div>);
   }
 });

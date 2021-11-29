@@ -6,38 +6,45 @@ import "./styles/Cards.css";
 export const BasketC = observer(
   class BasketC extends Component {
     render() {
-        return (
-            <div>
-            <CardGroup>
-              <Row xs={1} md={1} lg={1} xl={1} xxl={1}>
-                {this.props.butstore.data.map((item)=>(
-                    <Col key={item.key}>
-            <Card
-              text="white"
-              style={{
-                width: "19rem",
-                background: "rgba(42, 1, 58, 0)",
-              }}
-              className="gg-2"
-              border="info"
-            >
-              <Card.Img
-                variant="top"
-                src={item.srcImage}
-                className="CardImage"
-              />
-              <Card.Body>
-                <Card.Title>{item.title} </Card.Title>
-                <Card.Text>{item.text}</Card.Text>
-                <Button variant="outline-info" onClick={()=> this.props.butstore.dec(this.props.dtem)} >
-                          Удалить из корзины
-                        </Button>
-              </Card.Body>
-            </Card>
-          </Col> 
-                ))}
-              </Row>
-            </CardGroup>
-            </div>
-        )}
-});
+      return (
+        <div className="test">
+          <CardGroup>
+          <Row xs={1} md={2} lg={3} xl={4} xxl={5}>
+              {this.props.basketData.map((item, index) => (
+                <Col key={index}>
+                  <Card
+                    text="white"
+                    style={{
+                      width: "19rem",
+                      background: "rgba(42, 1, 58, 0)",
+                    }}
+                    className="gg-2"
+                    border="info"
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={item.srcImage}
+                      className="CardImage"
+                    />
+                    <Card.Body>
+                      <Card.Title>{item.title} </Card.Title>
+                      <Card.Text>{item.text}</Card.Text>
+                      <Button
+                        variant="outline-info"
+                        onClick={(item) => {
+                          this.props.delFromBasket(item);
+                        }}
+                      >
+                        Удалить из корзины
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </CardGroup>
+        </div>
+      );
+    }
+  }
+);
