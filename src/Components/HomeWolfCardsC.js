@@ -15,7 +15,7 @@ export const HomeWolfCardsC = observer(
             <h1>На нашем сайте вы сможете найти:</h1>
           </div>
           <div className="test">
-            <CardGroup>
+          <CardGroup>
               <Row xs={1} md={2} lg={3} xl={4} xxl={6}>
                 {store.dats.map((item) => (
                   <Col key={item.key}>

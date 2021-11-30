@@ -2,14 +2,17 @@
 .mb-2{
     background-color: rgba(42, 1, 58, 0);
     height: 550px;
-    margin-left: auto;
-    margin-right: auto; 
     margin-top: 25px; 
     position: relative;
+    margin-left:auto;
+    margin-right: auto;
 }
 .gg-2{
     height: auto;
+    width: 300px;
     margin-top: 25px; 
+    margin-left:auto;
+    margin-right: auto;
 }
 .text{
     color: white;
@@ -18,6 +21,8 @@
 .test{
     display: flex;
     flex-direction: row;
+    margin-left:auto;
+    margin-right: auto;
 }
 .row{
     justify-content: space-around;

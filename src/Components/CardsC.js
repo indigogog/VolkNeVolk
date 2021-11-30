@@ -12,7 +12,6 @@ export const CardsC = observer(
             <Card
               text="white"
               style={{
-                width: "19rem",
                 background: "rgba(42, 1, 58, 0)",
               }}
               className="gg-2"

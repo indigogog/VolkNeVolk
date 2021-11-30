@@ -11,10 +11,15 @@ export const OrigC = observer(
   class OrigC extends Component {
     render() {
       return (
-        <div>
+        <div className="start">
+        <div style={{ color: "white"}}>
+              <h3>
+              Кофе — это не просто напиток, это — религия. Не знаю, как у Вас, а у меня в чашке целый мир. Горячий, ароматный, с миллионом оттенков вкуса
+              </h3>{" "}
+            </div>
           <div className="test">
-            <CardGroup>
-              <Row xs={1} md={2} lg={3} xl={4} xxl={5}>
+            <CardGroup className="group">
+            <Row xs={1} md={1} lg={2} xl={3} xxl={3}>
                 {store.dats.map((item, index) => {
                   return (
                     <CardsC

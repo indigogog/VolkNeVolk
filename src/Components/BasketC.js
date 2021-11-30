@@ -10,7 +10,7 @@ export const BasketC = observer(
         <div className="test">
           <CardGroup>
           <Row xs={1} md={2} lg={3} xl={4} xxl={5}>
-              {this.props.basketData.map((item, index) => (
+              {this.props.basketData.map((item,index) => (
                 <Col key={index}>
                   <Card
                     text="white"
@@ -31,7 +31,8 @@ export const BasketC = observer(
                       <Card.Text>{item.text}</Card.Text>
                       <Button
                         variant="outline-info"
-                        onClick={(item) => {
+                        onClick={() => {
+                          console.log(item.title);
                           this.props.delFromBasket(item);
                         }}
                       >

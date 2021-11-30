@@ -36,15 +36,7 @@ export class HomePageStoreC {
       case 1:
         return (
           <div>
-            <div style={{ color: "white" }}>
-              <h3>
-                Когда очень хочется пиццы, то ее прекрасный образ начинает
-                неумолимо преследовать тебя, пока ты ждешь, когда в дверь
-                позвонит долгожданный курьер. От нетерпения смотришь в окно,
-                видишь луну, и она кажется тебе не холодной луной, а горячей
-                пиццей!
-              </h3>{" "}
-            </div>
+            
             <MemesCardsC
               addToBasket={(item) => {
                 this.inc(item);
@@ -55,13 +47,6 @@ export class HomePageStoreC {
       case 2:
         return (
           <div>
-            <div style={{ color: "white" }}>
-              <h3>
-                Однажды я забежал в японский ресторан, чтобы переждать проливной
-                дождь. Но, видимо, вымок так сильно, что меня снова потянуло на
-                воду и морепродукты. Вот так я и оказался любителем суши.
-              </h3>{" "}
-            </div>
             <QuotesC
               addToBasket={(item) => {
                 this.inc(item);
@@ -72,11 +57,6 @@ export class HomePageStoreC {
       case 3:
         return (
           <div>
-            <div style={{ color: "white" }}>
-              <h3>
-              Кофе — это не просто напиток, это — религия. Не знаю, как у Вас, а у меня в чашке целый мир. Горячий, ароматный, с миллионом оттенков вкуса
-              </h3>{" "}
-            </div>
             <OrigC
               addToBasket={(item) => {
                 this.inc(item);
@@ -88,8 +68,8 @@ export class HomePageStoreC {
         return (
           <BasketC
             basketData={this.data}
-            delFromBasket={(index) => {
-              this.dec(index);
+            delFromBasket={(item) => {
+              this.dec(item);
             }}
           />
         );
@@ -97,6 +77,7 @@ export class HomePageStoreC {
   }
   dec(item) {
     this.basketCount--;
+    console.log(item.srcImage);
     this.data.splice(this.data.indexOf(item), 1);
   }
 
