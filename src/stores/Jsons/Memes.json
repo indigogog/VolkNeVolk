@@ -1,67 +1,27 @@
 [
     {
         "key":0,
-        "srcImage":"https://pbs.twimg.com/media/EEd_kVLW4AAPQTX.jpg",
-        "title":"Не про цирк"
+        "srcImage":"http://pngimg.com/uploads/pizza/pizza_PNG44087.png",
+        "title":"Италиано"
     },
     {
         "key":1,
-        "srcImage":"https://www.meme-arsenal.com/memes/a39db43f4e1fa2dfe30635c2580dc74f.jpg",
-        "title":"Не про цирк"
+        "srcImage":"http://pngimg.com/uploads/pizza/pizza_PNG44078.png",
+        "title":"Мясная"
     },
     {
         "key":2,
-        "srcImage":"https://www.meme-arsenal.com/memes/80a2b6680a5504e050e41f3cdae0cf66.jpg",
-        "title":"Не про цирк"
+        "srcImage":"http://pngimg.com/uploads/pizza/pizza_PNG44028.png",
+        "title":"Ветчина и грибы"
     },
     {
         "key":3,
-        "srcImage":"https://www.meme-arsenal.com/memes/97945b5e0c4d4c5c506f0941023f42a7.jpg",
-        "title":"Не про цирк"
+        "srcImage":"http://pngimg.com/uploads/pizza/pizza_PNG44071.png",
+        "title":"Пеперони"
     },
     {
         "key":4,
-        "srcImage":"https://pbs.twimg.com/media/E75BAPRXsAgIclv.jpg",
-        "title":"Не про цирк"
-    },
-    {
-        "key":5,
-        "srcImage":"https://www.meme-arsenal.com/memes/687a6f9abbdb3110108a12b345195b2b.jpg",
-        "title":"Не про цирк"
-    },
-    {
-        "key":6,
-        "srcImage":"https://www.meme-arsenal.com/memes/6c98f5b2672a9b549d254dadda137784.jpg",
-        "title":"Не про цирк"
-    },
-    {
-        "key":7,
-        "srcImage":"https://www.meme-arsenal.com/memes/f76719375d2a4c3da85a4a84c9609daf.jpg",
-        "title":"Почти про цирк"
-    },
-    {
-        "key":8,
-        "srcImage":"https://static.mk.ru/upload/entities/2020/01/14/14/photoreportsImages/detailPicture/86/91/ca/8c/0491685_6076973.jpg",
-        "title":"Про цирк"
-    },
-    {
-        "key":9,
-        "srcImage":"http://risovach.ru/upload/2020/03/mem/hitrozhopyy-volk_235067864_orig_.jpg",
-        "title":"Про цирк"
-    },
-    {
-        "key":10,
-        "srcImage":"https://pbs.twimg.com/media/D6GESb5WAAI0B1M.jpg",
-        "title":"Про цирк"
-    },
-    {
-        "key":11,
-        "srcImage":"https://www.meme-arsenal.com/memes/72d4b0409256ddcaa58fda0b256dca59.jpg",
-        "title":"Про цирк"
-    },
-    {
-        "key":12,
-        "srcImage":"https://pbs.twimg.com/media/EIcFYlvWoAA64E8.jpg",
-        "title":"Не про цирк"
+        "srcImage":"http://pngimg.com/uploads/pizza/pizza_PNG44047.png",
+        "title":"Сырный пирог"
     }
 ]

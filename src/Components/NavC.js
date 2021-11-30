@@ -29,7 +29,7 @@ export const NavC = observer(
                     height="30"
                     className="d-inline-block align-top"
                   />{" "}
-                  Волк не волк, если волк волк волк!
+                  Волк не walk, walk это ходить!
                 </Navbar.Brand>
               </Button>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -40,11 +40,9 @@ export const NavC = observer(
                     id="collasible-nav-dropdown"
                     className="Drop"
                   >
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Мемы про волков</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Исходники</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Цитаты</Button></NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item><Button variant="danger">Walk</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Пицца</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Роллы</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Кофе</Button></NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>

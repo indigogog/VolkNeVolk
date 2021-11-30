@@ -1,22 +1,27 @@
 [
   {
     "key": 0,
-    "srcImage": "https://www.meme-arsenal.com/memes/a5365dfac79e08ce52538cfcb9124d3f.jpg"
+    "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97425.png",
+    "title":"Русский черный"
   },
   {
     "key": 1,
-    "srcImage": "https://www.meme-arsenal.com/memes/898727c3e28d5ca48b02ff47e0b6d973.jpg"
+    "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97433.png",
+    "title":"Новогодний 3 в 1"
+  },
+  {
+    "key": 2,
+    "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97432.png",
+    "title":"Пряный латте"
   },
   {
     "key": 3,
-    "srcImage": "https://www.meme-arsenal.com/memes/629cf11255d006996f83b92cbb8a4ebf.jpg"
+    "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97418.png",
+    "title":"Капучино"
   },
   {
     "key": 4,
-    "srcImage": "https://www.meme-arsenal.com/memes/c6cb59f430ae3bbe24f1cc7cdca3a8a6.jpg"
-  },
-  {
-    "key": 5,
-    "srcImage": "https://www.meme-arsenal.com/memes/4f3e8d01279dd3f734b309a45bc20fe9.jpg"
+    "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97415.png",
+    "title":"Американо"
   }
 ]

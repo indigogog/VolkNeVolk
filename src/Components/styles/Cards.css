@@ -1,11 +1,11 @@
 
 .mb-2{
     background-color: rgba(42, 1, 58, 0);
-    width: 450px;
-    height: 450px;
+    height: 550px;
     margin-left: auto;
     margin-right: auto; 
     margin-top: 25px; 
+    position: relative;
 }
 .gg-2{
     height: auto;

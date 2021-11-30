@@ -1,38 +1,27 @@
 [
     {
         "key": 0,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk1.jpg"
+        "srcImage":"http://pngimg.com/uploads/sushi/sushi_PNG98853.png",
+        "title":"Сет 'Два банана'"
     },
     {
         "key": 1,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk3.jpg"
+        "srcImage":"http://pngimg.com/uploads/sushi/sushi_PNG9202.png",
+        "title":"Сет 'Килиманджаро'"
     },
     {
         "key": 2,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk4.jpg"
+        "srcImage":"http://pngimg.com/uploads/sushi/sushi_PNG9245.png",
+        "title":"Сет 'Альпы'"
     },
     {
         "key": 3,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk5.jpg"
+        "srcImage":"http://pngimg.com/uploads/sushi/sushi_PNG9246.png",
+        "title":"Сет 'Африка'"
     },
     {
         "key": 4,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk6.jpg"
-    },
-    {
-        "key": 5,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk7.jpg"
-    },
-    {
-        "key": 6,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk8.jpg"
-    },
-    {
-        "key": 7,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk9.jpg"
-    },
-    {
-        "key": 8,
-        "srcImage":"https://statusas.ru/wp-content/uploads/2020/06/statusas-auf-volk10.jpg"
+        "srcImage":"http://pngimg.com/uploads/sushi/sushi_PNG9233.png",
+        "title":"Вирджиния"
     }
 ]

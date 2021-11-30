@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import { Row, CardGroup} from "react-bootstrap";
+import { Row, CardGroup } from "react-bootstrap";
 import { observer } from "mobx-react";
 import { MemesStore } from "../stores";
 import "./styles/But.css";

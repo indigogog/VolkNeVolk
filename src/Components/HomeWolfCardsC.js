@@ -16,7 +16,7 @@ export const HomeWolfCardsC = observer(
           </div>
           <div className="test">
             <CardGroup>
-              <Row xs={1} md={2} lg={2} xl={4} xxl={4}>
+              <Row xs={1} md={2} lg={3} xl={4} xxl={6}>
                 {store.dats.map((item) => (
                   <Col key={item.key}>
                     <Card
@@ -36,7 +36,7 @@ export const HomeWolfCardsC = observer(
                       <Card.Body>
                         <Card.Title>{item.title} </Card.Title>
                         <Card.Text>{item.text}</Card.Text>
-                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{this.props.ch(item.key)}}>
+                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{this.props.ch(item.key)}} className="buttons">
                           Открыть
                         </Button>
                       </Card.Body>

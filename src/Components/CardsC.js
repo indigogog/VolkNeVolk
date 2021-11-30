@@ -27,7 +27,7 @@ export const CardsC = observer(
                 <Card.Title>{this.props.dtem.title} </Card.Title>
                 <Card.Text>{this.props.dtem.text}</Card.Text>
                 <Button variant="outline-info" onClick={()=> this.props.Add(this.props.dtem)} >
-                          Открыть
+                          В корзину
                         </Button>
               </Card.Body>
             </Card>

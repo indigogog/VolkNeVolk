@@ -1,30 +1,23 @@
 [
     {
         "key": 1,
-        "srcImage": "https://www.meme-arsenal.com/memes/3bcd57d0767d6ca86797870061e1d773.jpg",
-        "title":"Мемы про волков",
-        "text":"В том числе и про цирк",
-        "buttonHref":"#memes"
+        "srcImage": "http://pngimg.com/uploads/pizza/pizza_PNG44093.png",
+        "title":"Пицца",
+        "text":" Жизнь — это в основном боль и борьба; в остальном — это любовь и пицца",
+        "buttonHref":"#pizza"
     },
     {
         "key": 2,
-        "srcImage": "https://www.meme-arsenal.com/memes/476180b6197a4a158196326cbea37281.jpg",
-        "title":"Цитаты волков",
-        "text":"Работа не волк, волк - walk",
+        "srcImage": "http://pngimg.com/uploads/sushi/sushi_PNG98865.png",
+        "title":"Роллы и суши",
+        "text":"Тот, кто с 1-го раза распробовал японские изыски, приравнивается к званию восточного мудреца",
         "buttonHref":"#quotes"
     },
     {
         "key": 3,
-        "srcImage": "https://www.meme-arsenal.com/memes/27eceb078fff751d0fbc707c644c7478.jpg",
-        "title":"Исходники",
-        "text":"Пикчи",
+        "srcImage": "http://pngimg.com/uploads/mug_coffee/mug_coffee_PNG97445.png",
+        "title":"Кофе",
+        "text":"Кофе должен быть горячим как ад, черным как черт, чистым как ангел и сладким как любовь.",
         "buttonHref":"#orig"
-    },
-    {
-        "key": 4,
-        "srcImage": "https://i.ytimg.com/vi/m5T9cdFByEE/maxresdefault.jpg",
-        "title":"Walk",
-        "text":"Walk",
-        "buttonHref":"#walk"
-    }
+    }    
 ]
