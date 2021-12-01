@@ -1,10 +1,46 @@
 import { React, Component } from "react";
-import { Card,  Col,  Button } from "react-bootstrap";
+import { Card, Col, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import "./styles/Cards.css";
+import Alert from "react-bootstrap/Alert";
 
 export const CardsC = observer(
   class CardsC extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        alert: true,
+      };
+    }
+
+    AlertRender() {
+      if (this.state.alert) {
+        return (
+          <Button
+            variant="outline-info"
+            onClick={() => {
+              if (this.state.alert) {
+                this.setState({ alert: false });
+                this.props.Add(this.props.dtem);
+              }
+            }}
+          >
+            В корзину
+          </Button>
+        );
+      }
+      else{
+        return(
+          <Alert variant="info" dismissible>
+        <Alert.Heading>Отличный выбор!</Alert.Heading>
+        <p>
+          {this.props.dtem.title} добавлен в корзину
+        </p>
+      </Alert>
+        )
+      }
+    }
+
     render() {
       return (
         <div>
@@ -25,9 +61,7 @@ export const CardsC = observer(
               <Card.Body>
                 <Card.Title>{this.props.dtem.title} </Card.Title>
                 <Card.Text>{this.props.dtem.text}</Card.Text>
-                <Button variant="outline-info" onClick={()=> this.props.Add(this.props.dtem)} >
-                          В корзину
-                        </Button>
+                {this.AlertRender()}
               </Card.Body>
             </Card>
           </Col>

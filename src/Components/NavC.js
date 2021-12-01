@@ -2,13 +2,21 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
-import { React, Component } from "react";
+import { React, Component} from "react";
 import { observer } from "mobx-react";
 import { NavDropdown } from "react-bootstrap";
 import "./styles/Nav.css";
 
 export const NavC = observer(
   class NavC extends Component {
+    timer;
+
+  sendMessage = (e) => {
+    this.timer = setTimeout(() => alert('Hey ??'), 1000);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+  }
     render() {
       return (
         <div className="NavPan">
@@ -43,6 +51,7 @@ export const NavC = observer(
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Пицца</Button></NavDropdown.Item>
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Роллы</Button></NavDropdown.Item>
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Кофе</Button></NavDropdown.Item>
+                    <Button onClick={()=>{this.sendMessage()}}>ghfgdfg</Button>
                   </NavDropdown>
                 </Nav>
                 <Nav>

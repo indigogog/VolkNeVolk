@@ -8,3 +8,25 @@
 .start{
     width: 60vw;
 }
+
+.BasketCard{
+    height: 150px;
+    margin-top: 50px;
+    align-items: center !important;
+    flex-direction: row !important;
+    width:80vw !important;
+}
+.BasketCardImage{
+    height: 100px;
+    width: 100px !important;
+    margin-left: 5%;
+}
+.Basketgroup{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.BasketCardButton{
+    right: 0;
+    margin-right: 5%;
+}

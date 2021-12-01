@@ -11,6 +11,7 @@ export class HomePageStoreC {
   count = 0;
   basketCount = 0;
   data = [];
+  addedInBasket=false;
   constructor() {
     makeAutoObservable(this, {
       change_count: action.bound,
