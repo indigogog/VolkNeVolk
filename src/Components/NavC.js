@@ -9,14 +9,7 @@ import "./styles/Nav.css";
 
 export const NavC = observer(
   class NavC extends Component {
-    timer;
-
-  sendMessage = (e) => {
-    this.timer = setTimeout(() => alert('Hey ??'), 1000);
-  }
-  componentWillUnmount() {
-    clearTimeout(this.timer);
-  }
+    timer;тзь
     render() {
       return (
         <div className="NavPan">
@@ -51,7 +44,6 @@ export const NavC = observer(
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Пицца</Button></NavDropdown.Item>
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Роллы</Button></NavDropdown.Item>
                     <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Кофе</Button></NavDropdown.Item>
-                    <Button onClick={()=>{this.sendMessage()}}>ghfgdfg</Button>
                   </NavDropdown>
                 </Nav>
                 <Nav>

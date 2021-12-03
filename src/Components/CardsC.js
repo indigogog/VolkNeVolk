@@ -31,7 +31,7 @@ export const CardsC = observer(
       }
       else{
         return(
-          <Alert variant="info" dismissible>
+          <Alert variant="info" dismissible onClose={() => this.setState({alert: true})}>
         <Alert.Heading>Отличный выбор!</Alert.Heading>
         <p>
           {this.props.dtem.title} добавлен в корзину
