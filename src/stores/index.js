@@ -1,5 +1,2 @@
 export * from './HomeWolfCardsStore.js'
-export * from './MemesStore.js'
-export * from './OrigStore.js'
-export * from './QuotesStore.js'
 export * from './HomePageStoreC'
