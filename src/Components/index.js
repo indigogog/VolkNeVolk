@@ -1,5 +1,3 @@
-export * from './CounterClass';
-export * from './CounterF';
 export * from './NavC';
 export * from './OrigC';
 export * from './QuotesC';
