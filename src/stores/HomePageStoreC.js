@@ -77,7 +77,7 @@ export class HomePageStoreC {
                 this.inc(item);
               }}
               datastore={this.cofedata}
-              mystring = {this.suhistring}
+              mystring = {this.cofestring}
             />
           </div>
         );
