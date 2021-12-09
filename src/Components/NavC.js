@@ -1,15 +1,10 @@
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
 import { React, Component} from "react";
 import { observer } from "mobx-react";
-import { NavDropdown } from "react-bootstrap";
+import { NavDropdown, Button, Nav, Container,Navbar } from "react-bootstrap";
 import "./styles/Nav.css";
 
 export const NavC = observer(
   class NavC extends Component {
-    timer;тзь
     render() {
       return (
         <div className="NavPan">
@@ -49,7 +44,7 @@ export const NavC = observer(
                 <Nav>
                   <Nav.Link>
                     <Button variant="outline-info" onClick={()=>{this.props.homestore.change_count(100)}}>
-                      Корзина {this.props.homestore.basketCount}{" "}
+                      Корзина {this.props.mainstore.basketCount}{" "}
                     </Button>
                   </Nav.Link>
                 </Nav>
