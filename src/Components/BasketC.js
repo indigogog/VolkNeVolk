@@ -11,7 +11,7 @@ export const BasketC = observer(
         <div className="test">
           <CardGroup className="Basketgroup">
               <Row xs={1} md={1} lg={1} xl={1} xxl={1}>
-              {this.props.basketData.map((item,index) => (
+              {this.props.mainstore.data.map((item,index) => (
                 <Col key={index}>
                   <Card
                     style={{background: "rgba(42, 1, 58, 0)",}}
@@ -30,8 +30,7 @@ export const BasketC = observer(
                     <Button
                         variant="outline-info"
                         onClick={() => {
-                          console.log(item.title);
-                          this.props.delFromBasket(item);
+                          this.props.store.dec(item);
                         }}
                         className="BasketCardButton"
                       >
