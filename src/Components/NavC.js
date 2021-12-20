@@ -16,7 +16,7 @@ export const NavC = observer(
             fixed="top"
           >
             <Container>
-              <Button variant="outline-info" onClick={()=>{this.props.homestore.change_count(0)}}>
+              <Button variant="outline-info" onClick={()=>{this.props.change_count(0)}}>
                 <Navbar.Brand >
                   <img
                     alt=""
@@ -36,14 +36,14 @@ export const NavC = observer(
                     id="collasible-nav-dropdown"
                     className="Drop"
                   >
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(1)}}>Пицца</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(2)}}>Роллы</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.homestore.change_count(3)}}>Кофе</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(1)}}>Пицца</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(2)}}>Роллы</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(3)}}>Кофе</Button></NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>
                   <Nav.Link>
-                    <Button variant="outline-info" onClick={()=>{this.props.homestore.change_count(100)}}>
+                    <Button variant="outline-info" onClick={()=>{this.props.change_count(100)}}>
                       Корзина {this.props.mainstore.basketCount}{" "}
                     </Button>
                   </Nav.Link>
