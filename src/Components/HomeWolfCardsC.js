@@ -1,14 +1,17 @@
-import { React, Component } from "react";
+import { React,  useContext} from "react";
 import { Button, Card, Row, Col, CardGroup } from "react-bootstrap";
 import { observer } from "mobx-react";
 import "./styles/Cards.css";
 import { HomeWolfCardsStore } from "../stores";
+import { StoreContext } from "../index";
 
-const store = new HomeWolfCardsStore();
+
 
 export const HomeWolfCardsC = observer(
-  class HomeWolfCardsC extends Component {
-    render() {
+ function HomeWolfCardsC(props) {
+
+  const store = useContext(StoreContext);
+  
       return (
         <div>
           <div className="text">
@@ -17,7 +20,7 @@ export const HomeWolfCardsC = observer(
           <div className="test">
           <CardGroup>
               <Row xs={1} md={2} lg={3} xl={4} xxl={6}>
-                {store.dats.map((item) => (
+                {store.homeWolf.dats.map((item) => (
                   <Col key={item.key}>
                     <Card
                       text="white"
@@ -36,7 +39,7 @@ export const HomeWolfCardsC = observer(
                       <Card.Body>
                         <Card.Title>{item.title} </Card.Title>
                         <Card.Text>{item.text}</Card.Text>
-                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{this.props.ch(item.key)}} className="buttons">
+                        <Button variant="outline-info" href={item.buttonHref} onClick={()=>{props.ch(item.key)}} className="buttons">
                           Открыть
                         </Button>
                       </Card.Body>
@@ -48,6 +51,6 @@ export const HomeWolfCardsC = observer(
           </div>
         </div>
       );
-    }
+    
   }
 );

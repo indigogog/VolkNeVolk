@@ -1,11 +1,14 @@
-import { React, Component} from "react";
+import { React,useContext} from "react";
 import { observer } from "mobx-react";
 import { NavDropdown, Button, Nav, Container,Navbar } from "react-bootstrap";
 import "./styles/Nav.css";
+import { StoreContext } from '../index'
+
+
 
 export const NavC = observer(
-  class NavC extends Component {
-    render() {
+  function NavC(props) {
+    const mainstore = useContext(StoreContext);
       return (
         <div className="NavPan">
           <Navbar
@@ -16,7 +19,7 @@ export const NavC = observer(
             fixed="top"
           >
             <Container>
-              <Button variant="outline-info" onClick={()=>{this.props.change_count(0)}}>
+              <Button variant="outline-info" onClick={()=>{props.change_count(0)}}>
                 <Navbar.Brand >
                   <img
                     alt=""
@@ -36,15 +39,15 @@ export const NavC = observer(
                     id="collasible-nav-dropdown"
                     className="Drop"
                   >
-                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(1)}}>Пицца</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(2)}}>Роллы</Button></NavDropdown.Item>
-                    <NavDropdown.Item><Button onClick={()=>{this.props.change_count(3)}}>Кофе</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{props.change_count(1)}}>Пицца</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{props.change_count(2)}}>Роллы</Button></NavDropdown.Item>
+                    <NavDropdown.Item><Button onClick={()=>{props.change_count(3)}}>Кофе</Button></NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>
                   <Nav.Link>
-                    <Button variant="outline-info" onClick={()=>{this.props.change_count(100)}}>
-                      Корзина {this.props.mainstore.basketCount}{" "}
+                    <Button variant="outline-info" onClick={()=>{props.change_count(100)}}>
+                      Корзина {mainstore.homePage.basketCount}{" "}
                     </Button>
                   </Nav.Link>
                 </Nav>
@@ -53,6 +56,5 @@ export const NavC = observer(
           </Navbar>
         </div>
       );
-    }
   }
 );

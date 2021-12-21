@@ -3,7 +3,9 @@ import Pizza from "./Jsons/Memes.json";
 import sushi from "./Jsons/quotes.json";
 import cofe from "./Jsons/original.json";
 
+
 export class HomePageStoreC {
+
   count = 0;
   basketCount = 0;
   data = [];
@@ -18,7 +20,7 @@ export class HomePageStoreC {
   sushistring =
     "Однажды я забежал в японский ресторан, чтобы переждать проливной дождь. Но, видимо, вымок так сильно, что меня снова потянуло на воду и морепродукты. Вот так я и оказался любителем суши.";
 
-  constructor() {
+    constructor() {
     makeAutoObservable(this, {
       drow: action.bound,
       inc: action.bound,

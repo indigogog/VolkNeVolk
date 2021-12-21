@@ -1,86 +1,53 @@
-import { React, Component } from "react";
-import { HomeWolfCardsC, MemesCardsC, BasketC,NavC } from ".";
-import { HomePageStoreC } from "../stores";
+import { React, useState, useContext } from "react";
+import { HomeWolfCardsC, MemesCardsC, BasketC, NavC } from ".";
 import { observer } from "mobx-react";
+import { StoreContext } from "../index";
 
-const mainstore = new HomePageStoreC();
+export const HomePageC = observer(function HomePageC() {
+  const mainstore = useContext(StoreContext);
 
-export const HomePageC = observer(
-  class HomePageC extends Component {
-    constructor(props) {
-      super(props);
-      this.state ={
-        count: 0,
-      }
-      this.change_count = this.change_count.bind(this);
-      this.drow = this.drow.bind(this);
+  const [count, setcount] = useState(0);
+
+  const change_count = (n) => {
+    setcount(n);
+  };
+
+  const drow = () => {
+    switch (count) {
+      case 0:
+        return (
+          <HomeWolfCardsC
+            ch={(n) => {
+              change_count(n);
+            }}
+          />
+        );
+      case 1:
+        return (
+          <div>
+            <MemesCardsC n={1} />
+          </div>
+        );
+      case 2:
+        return (
+          <div>
+            <MemesCardsC n={2} />
+          </div>
+        );
+      case 3:
+        return (
+          <div>
+            <MemesCardsC n={3} />
+          </div>
+        );
+      default:
+        return <BasketC />;
     }
-    change_count(n) {
-      this.setState({
-        count: n,
-      });
-    }
-    drow() {
-      switch (this.state.count) {
-        case 0:
-          return (
-            <HomeWolfCardsC
-              ch={(n) => {
-                this.change_count(n);
-              }}
-            />
-          );
-        case 1:
-          return (
-            <div>
-              <MemesCardsC
-                n={1}
-                mainstore={mainstore}
-                // datastore={this.pizzadata}
-                // mystring = {this.pizastring}
-              />
-            </div>
-          );
-        case 2:
-          return (
-            <div>
-              <MemesCardsC
-                n={2}
-                mainstore={mainstore}
-                // datastore={this.sushidata}
-                // mystring = {this.sushistring}
-              />
-            </div>
-          );
-        case 3:
-          return (
-            <div>
-              <MemesCardsC
-                n={3}
-                mainstore={mainstore}
-                // datastore={this.cofedata}
-                // mystring = {this.cofestring}
-              />
-            </div>
-          );
-        default:
-          return (
-            <BasketC
-            mainstore={mainstore}          
-            />
-          );
-      }
-    }
-    render() {
-      return (
-        <div className={mainstore.count}>
-          <NavC
-            change_count ={(n)=>this.change_count(n)}
-            mainstore = {mainstore}
-           />
-          {this.drow()}
-        </div>
-      );
-    }
-  }
-);
+  };
+  return (
+    <div className={mainstore.count}>
+      <NavC change_count={(n) => change_count(n)} />
+      {drow()}
+    </div>
+  );
+});

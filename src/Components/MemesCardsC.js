@@ -1,61 +1,61 @@
-import { React, Component } from "react";
+import { React,  useContext  } from "react";
 import { Row, CardGroup } from "react-bootstrap";
 import { observer } from "mobx-react";
 import "./styles/But.css";
 import { CardsC } from "./CardsC";
+import { StoreContext } from '../index'
+
+
 
 export const MemesCardsC = observer(
-  class MemesCardsC extends Component {
-    constructor(props){
-      super(props);
-      this.drowCadrds= this.drowCadrds.bind(this);
-      this.drowString = this.drowString.bind(this);
-    }
-    drowString(){
-      switch (this.props.n) {
+  function MemesCardsC(props) {
+    const store = useContext(StoreContext);
+   const drowString=()=>{
+    
+      switch (props.n) {
         case 1:
-          return this.props.mainstore.pizzastring;
+          return store.homePage.pizastring;
         case 2:
-          return this.props.mainstore.sushistring;
+          return store.homePage.sushistring;
         case 3:
-          return this.props.mainstore.cofestring;
+          return store.homePage.cofestring;
         default:
           break;
       }
     }
-    drowCadrds(){
-      switch (this.props.n) {
+   const drowCadrds=()=>{
+      switch (props.n) {
         case 1:
-          return this.props.mainstore.pizzadata.map((item) => {
+          return store.homePage.pizzadata.map((item) => {
             return (
               <CardsC
                 dtem={item}
                 Add={(item) => {
-                  this.props.mainstore.inc(item);
+                  store.homePage.inc(item);
                 }}
                 key={item.key}
               />
             );
           });
         case 2:
-          return this.props.mainstore.sushidata.map((item) => {
+          return store.homePage.sushidata.map((item) => {
             return (
               <CardsC
                 dtem={item}
                 Add={(item) => {
-                  this.props.mainstore.inc(item);
+                  store.homePage.inc(item);
                 }}
                 key={item.key}
               />
             );
           });
         case 3:
-          return this.props.mainstore.cofedata.map((item) => {
+          return store.homePage.cofedata.map((item) => {
             return (
               <CardsC
                 dtem={item}
                 Add={(item) => {
-                  this.props.mainstore.inc(item);
+                  store.homePage.inc(item);
                 }}
                 key={item.key}
               />
@@ -65,23 +65,24 @@ export const MemesCardsC = observer(
           break;
       }
     }
-    render() {
+    
       return (
         <div className="start">
           <div style={{ color: "white" }}>
             <h3>
-              {this.drowString()}
+            {console.log("thth",store)}
+              {drowString()}
             </h3>{" "}
           </div>
           <div className="test">
             <CardGroup className="group">
               <Row xs={1} md={1} lg={2} xl={3} xxl={3}>
-              {this.drowCadrds()}
+              {drowCadrds()}
               </Row>
             </CardGroup>
           </div>
         </div>
       );
-    }
+    
   }
 );
