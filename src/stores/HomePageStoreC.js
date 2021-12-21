@@ -5,7 +5,6 @@ import cofe from "./Jsons/original.json";
 
 
 export class HomePageStoreC {
-
   count = 0;
   basketCount = 0;
   data = [];

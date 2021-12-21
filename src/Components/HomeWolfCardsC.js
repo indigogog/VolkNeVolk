@@ -2,7 +2,6 @@ import { React,  useContext} from "react";
 import { Button, Card, Row, Col, CardGroup } from "react-bootstrap";
 import { observer } from "mobx-react";
 import "./styles/Cards.css";
-import { HomeWolfCardsStore } from "../stores";
 import { StoreContext } from "../index";
 
 
